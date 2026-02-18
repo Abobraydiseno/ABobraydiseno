@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB obra y diseño</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0f0f0f;
+color:white;
+}
+
+section{padding:100px 10%;}
+h2{font-size:38px;margin-bottom:40px;}
+p{line-height:1.7;color:#cfcfcf;}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:28px 10%;   /* un poco más alto para el logo */
+background:rgba(0,0,0,0.88);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,0.18);
+}
+
+.logo{
+height:110px;
+object-fit:contain;
+filter:drop-shadow(0 0 8px rgba(212,175,55,0.45));
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
+}
+nav a:hover{opacity:0.6;}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('hero.jpg') center/cover no-repeat;
+display:flex;
+align-items:flex-start;
+padding-top:160px;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.7));
+}
+
+.hero-content{
+position:relative;
+max-width:680px;
+padding-left:10%;
+}
+
+.hero h1{
+font-size:64px;
+font-weight:800;
+}
+
+.hero p{
+margin-top:22px;
+font-size:20px;
+color:#eaeaea;
+}
+
+/* SECCIÓN VISUAL */
+.visual{background:#111;}
+.visual-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:40px;
+align-items:center;
+}
+.visual img, video{
+width:100%;
+border-radius:14px;
+background:black;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.card{
+background:#1a1a1a;
+padding:35px;
+border:1px solid #222;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-8px);}
+
+/* PACKAGES */
+.packages{background:#111;}
+.package-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+.package{
+background:#1a1a1a;
+padding:40px;
+border:1px solid #333;
+}
+
+/* FACTORS */
+.factors{background:#151515;}
+
+/* FOOTER */
+footer{
+background:#0a0a0a;
+padding:50px 10%;
+text-align:center;
+color:#aaa;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+z-index:2000;
+}
+.whatsapp img{width:30px;}
+
+@media(max-width:900px){
+.visual-grid{grid-template-columns:1fr;}
+.hero h1{font-size:42px;}
+section{padding:80px 8%;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<img src="logo.png" class="logo">
+<div>
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#paquetes">Paquetes</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<h1>AB obra y diseño</h1>
+<p>
+Soluciones integrales en arquitectura, ingeniería y modelado BIM orientadas a la
+optimización técnica, funcional y normativa de proyectos constructivos.
+Diseñamos espacios eficientes, viables y ejecutables con alto estándar técnico.
+</p>
+</div>
+</section>
+
+<!-- VISUAL -->
+<section class="visual">
+<h2>Distribución y visualización del proyecto</h2>
+<div class="visual-grid">
+<div>
+<img src="render1.jpg" alt="Render proyecto arquitectónico">
+</div>
+<div>
+<video controls muted playsinline>
+<source src="IMG_4426.mp4" type="video/mp4">
+Tu navegador no soporta video HTML5.
+</video>
+</div>
+</div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+<h2>Quiénes somos</h2>
+<p>
+AB Obra y Diseño es un estudio técnico especializado en el desarrollo integral de
+proyectos arquitectónicos, ingeniería aplicada y coordinación digital BIM.
+Integramos diseño, precisión técnica y cumplimiento normativo para transformar
+ideas en soluciones ejecutables, optimizadas y coherentes con la realidad
+constructiva.
+</p>
+</section>
+
+<!-- MISIÓN Y VISIÓN -->
+<section>
+<h2>Misión</h2>
+<p>
+Desarrollar soluciones integrales de diseño arquitectónico e ingeniería que
+garanticen eficiencia técnica, funcionalidad espacial y cumplimiento normativo,
+aportando valor real a cada proyecto mediante un enfoque profesional y preciso.
+</p>
+
+<h2>Visión</h2>
+<p>
+Consolidarnos como un estudio técnico referente en el desarrollo integral de
+proyectos arquitectónicos y de ingeniería, destacándonos por la calidad técnica,
+la innovación digital mediante metodologías BIM y la viabilidad real de ejecución.
+</p>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+<h2>Servicios</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Diseño Arquitectónico</h3>
+<p>
+Desarrollo conceptual y técnico de proyectos, diseño funcional, distribución
+espacial, documentación normativa y preparación del proyecto para ejecución.
+</p>
+</div>
+
+<div class="card">
+<h3>Ingeniería MEP</h3>
+<p>
+Diseño técnico de redes hidráulicas, sanitarias, eléctricas y de gas,
+coordinadas con arquitectura bajo normativas vigentes.
+</p>
+</div>
+
+<div class="card">
+<h3>Modelado BIM</h3>
+<p>
+Modelado digital inteligente, coordinación interdisciplinaria, detección de
+interferencias y optimización técnica para ejecución de obra.
+</p>
+</div>
+
+<div class="card">
+<h3>Asesorías Técnicas</h3>
+<p>
+Acompañamiento profesional, revisión técnica, optimización del diseño y apoyo
+especializado durante la planificación y desarrollo del proyecto.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- PAQUETES -->
+<section id="paquetes" class="packages">
+<h2>Paquetes de Diseño</h2>
+<div class="package-grid">
+
+<div class="package">
+<h3>Esencial</h3>
+<ul>
+<li>Plantas arquitectónicas</li>
+<li>Distribución funcional</li>
+<li>Cuadro de áreas</li>
+<li>Propuesta conceptual</li>
+<li>Revisión normativa básica</li>
+</ul>
+</div>
+
+<div class="package">
+<h3>Integral</h3>
+<ul>
+<li>Plantas, cortes y fachadas</li>
+<li>Niveles y especificaciones</li>
+<li>Diseño preliminar MEP</li>
+<li>Modelo BIM básico</li>
+<li>Coordinación técnica inicial</li>
+</ul>
+</div>
+
+<div class="package">
+<h3>Ejecutivo Completo</h3>
+<ul>
+<li>Diseño arquitectónico completo</li>
+<li>Modelado BIM avanzado</li>
+<li>Diseño MEP detallado</li>
+<li>Diseño estructural</li>
+<li>Planos listos para construcción</li>
+<li>Acompañamiento técnico</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- FACTORES -->
+<section class="factors">
+<h2>Sistema de Valoración</h2>
+<p>
+Nuestros proyectos se estructuran bajo criterios técnicos claros:
+<br><br>
+• Alcance del proyecto y nivel de desarrollo requerido  
+<br>
+• Complejidad técnica e integración interdisciplinaria  
+<br>
+• Área construida y escala del proyecto  
+<br><br>
+Esto nos permite formular propuestas coherentes, transparentes y ajustadas a la
+realidad de cada proyecto.
+</p>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+<p>AB obra y diseño © 2026</p>
+<p>Estudio técnico de Arquitectura • Ingeniería • Modelado BIM</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573197662336" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+</body>
+</html>
